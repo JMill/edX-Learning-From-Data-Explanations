@@ -12,5 +12,5 @@ Pull requests are preferred. However, if you aren't familar with git, you can tw
 
 Contributors
 -----------
-* jmill
+* [jmill](http://jmillville.com) [@ImJMill](https://twitter.com/imjmill)
 * others as cited
