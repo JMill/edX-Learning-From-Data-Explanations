@@ -47,3 +47,31 @@ def q05():
     return u, v, E, i
 
 print q05()
+
+def euclidDist(x1, y1, x2, y2):
+    return sqrt( (x1-x2)**2 + (y1-y2)**2 )
+
+def q06():
+    choices = { 
+        "a": [1.,1.],
+        "b": [0.713, 0.045],
+        "c": [0.016, 0.112],
+        "d": [-0.083, 0.029],
+        "e": [0.045, 0.024]
+    }
+
+    u1, v1, _, _ = q05()
+    closestChoice = ''
+    closestDistance = 999
+
+    for choice in choices:
+        u2,v2 = choices[choice]
+        distanceBetweenValues = euclidDist(u1, v1, u2, v2)
+        if distanceBetweenValues < closestDistance:
+            closestDistance = distanceBetweenValues
+            closestChoice = choice
+    return closestChoice, closestDistance
+
+print q06()
+
+
