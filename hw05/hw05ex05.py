@@ -74,4 +74,24 @@ def q06():
 
 print q06()
 
+def q07():
+    '''
+    'coordinate descent':
+    1. move only along u coordinate to reduce error.
+    2. reevalute and move only along the v coordinate to reduce the error.
+
+    returns E(u,v) after 15 epochs (iterations).
+    '''
+    i = 0
+    eta = 0.1
+    u = 1.0
+    v = 1.0
+
+    while i < 15:
+        u = u - eta * calcEwrtu(u, v)
+        v = v - eta * calcEwrtv(u, v)
+        i += 1
+    return calcE(u, v)
+
+print q07()
 
